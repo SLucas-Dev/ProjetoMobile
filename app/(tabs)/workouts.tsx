@@ -9,6 +9,7 @@ import {
   SafeAreaView,
   StatusBar,
 } from "react-native";
+import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -197,9 +198,13 @@ export default function Workouts() {
                   <Ionicons name="flame" size={16} color="#f59e0b" />
                   <Text style={styles.caloriesText}>{workout.calories} cal</Text>
                 </View>
-                <TouchableOpacity style={styles.startButton} activeOpacity={0.7}>
-                  <Text style={styles.startButtonText}>Começar</Text>
-                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.startButton}
+                  activeOpacity={0.7}
+                  onPress={() => router.push("/form-check")}
+>           
+             <Text style={styles.startButtonText}>Começar</Text>
+            </TouchableOpacity>
               </View>
             </TouchableOpacity>
           ))}

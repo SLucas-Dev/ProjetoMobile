@@ -9,6 +9,9 @@ import {
   StyleProp, 
   ViewStyle 
 } from "react-native";
+import { router } from "expo-router";
+
+<TouchableOpacity onPress={() => router.push("/(tabs)/form-check")} />
 import { Ionicons } from "@expo/vector-icons";
 
 interface ButtonProps extends TouchableOpacityProps {
